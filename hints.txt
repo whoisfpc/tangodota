@@ -1,0 +1,3 @@
+icellbits = 7// constant
+地图大小是128*128 cells
+m_cellX和m_cellY需要减去offset 64
