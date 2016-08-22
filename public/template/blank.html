@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="progress" ng-show="upinfo.onUpload">
+      <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{upinfo.uploadedPercent*100}}" aria-valuemin="0"
+        aria-valuemax="100" style="width: {{upinfo.uploadedPercent*100}}%">
+        <span class="sr-only">{{upinfo.uploadedPercent*100}}%</span>
+      </div>
+    </div>
+  </div>
+</div>

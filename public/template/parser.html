@@ -1,0 +1,47 @@
+    <!-- replay parser -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>match id</th>
+                <th>duration time</th>
+                <th>game mode</th>
+                <th>winner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{replayInfo.matchId}}</td>
+                <td>{{replayInfo.dTime | convertTime}}</td>
+                <td>{{replayInfo.gameMode==3?'All Pick':'Unknow'}}</td>
+                <td>{{replayInfo.winner == 2?'Radiant':'Dire'}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div ng-repeat="hero in players.team1" class="avatar center-block" ng-click="switchPlayer($index)">
+            <img ng-src="{{'http://cdn.dota2.com/apps/dota2/images/heroes/' + hero.heroName + '_vert.jpg'}}"
+              alt="avatar">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div id="heatmap-container">
+            <img src="/images/Minimap_6.86.png" alt="minimap" style="width: 100%">
+          </div>            
+        </div>
+        <div class="col-md-2">
+          <div ng-repeat="hero in players.team2" class="avatar center-block" ng-click="switchPlayer(5+$index)">
+            <img ng-src="{{'http://cdn.dota2.com/apps/dota2/images/heroes/' + hero.heroName + '_vert.jpg'}}"
+              alt="avatar">
+          </div>
+        </div>
+      </div>
+      <div class="slider-wrapper center-block">
+        <div id="slider-container"></div>                
+      </div>
+    </div>

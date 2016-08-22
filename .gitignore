@@ -1,0 +1,16 @@
+.vscode/
+/node_modules/
+/tmp/*
+.eslintignore
+.eslintrc.js
+jsconfig.json
+/typings/
+
+/* intellij idea ignore */
+.idea/
+/TangoParser/target/
+/TangoParser/dependency-reduced-pom.xml
+/TangoParser/GameInfo.txt
+/TangoParser/*.json
+/TangoParser/*.dem
+/TangoParser/TangoParser.iml

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tango dota2 parser</title>
+    <meta  charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" >
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-slider.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="/javascripts/jquery-2.2.4.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/bootstrap-slider.js"></script>
+    <script src="/javascripts/heatmap.js"></script>    
+    <script src="/javascripts/angular.js"></script>
+    <script src="/javascripts/angular-ui-router.js"></script>
+    <script src="/javascripts/tango.js"></script>
+</head>
+
+<body ng-app="tango">
+    <!-- navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <form ng-controller="UploadCtrl" ng-submit="upload()" class="navbar-form navbar-right">
+          <div class="form-group">
+            <input ng-model="matchId" type="text" class="form-control" id="matchid" placeholder="Match id">
+          </div>
+          <span class="lead" style="color: white;">or</span>
+          <div class="form-group">
+            <span id="file-select-button" class="btn btn-block btn-primary btn-file">
+              <span id="file-select-text">{{replayFile.name ? replayFile.name : 'Select Replay File'}}</span>
+              <input fileread="replayFile" id="file-select" type="file" name="replay_blob" class="form-control">
+            </span>
+          </div>
+          <button type="submit" class="btn btn-danger">parse</button>
+        </form>
+      </div>
+    </nav>
+
+    <ui-view></ui-view>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
+</body>
+
+</html>
