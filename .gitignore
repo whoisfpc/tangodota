@@ -1,7 +1,7 @@
 .vscode/
 /node_modules/
 /tmp/*
-!/tmp
+!/tmp/placeholder.txt
 .eslintignore
 .eslintrc.js
 jsconfig.json
